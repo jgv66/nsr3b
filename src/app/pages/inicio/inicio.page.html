@@ -1,0 +1,57 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>    
+    <ion-title>NSR3B</ion-title>
+    <ion-buttons  slot="end" *ngIf=" listaEventos ">
+      <ion-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf=" listaAlumnos " padding>
+  <h3>Alumnos del {{ persona?.curso }}</h3>
+  <ion-list class="lista">
+    <ion-item *ngFor="let alumno of alumnos" detail>
+      <ion-avatar slot="start">
+        <ion-img src="{{ url }}{{ puerto }}/public/img/{{ alumno.rut }}.jpg"></ion-img>
+      </ion-avatar>
+      <h2>{{ alumno.nombres +' '+ alumno.apellidos }}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content *ngIf=" listaEventos " padding>
+    <h3>Eventos</h3>
+    <ion-list class="lista">
+      <ion-item *ngFor="let evento of eventos" detail>
+        <h2>{{ evento.fecha }}</h2>
+        <p>{{ evento.descripcion }}</p>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf=" listaCumples " padding>
+    <h3>Cumpleaños del mes</h3>
+    <ion-list class="lista">
+      <ion-item *ngFor="let cumple of cumples" detail>
+        <h2>{{ cumple.fecha }}</h2>
+        <p>{{ cumple.nombre + ' ' + cumple.apellidos }}</p>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row>
+          <ion-col><ion-button expand="full" (click)="cambiaContenido(1)"><ion-icon slot="icon-only" name="star">     </ion-icon></ion-button></ion-col>
+          <ion-col><ion-button expand="full" (click)="cambiaContenido(2)"><ion-icon slot="icon-only" name="calendar"> </ion-icon></ion-button></ion-col>
+          <ion-col><ion-button expand="full" (click)="cambiaContenido(3)"><ion-icon slot="icon-only" name="gift">     </ion-icon></ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

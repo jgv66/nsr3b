@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de ingreso - NSR3B</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ 
+  <ion-list>
+
+    <ion-item-divider color="primary">
+          <ion-label>Mis datos</ion-label>
+    </ion-item-divider>
+    <ion-item>
+        <ion-label position="stacked">Rut (sin puntos, con guión y dígito. ej: 15236875-1)</ion-label>
+        <ion-input type="text" name="rut" [(ngModel)]="rut" clearInput='true' autofocus='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Mis nombres</ion-label>
+        <ion-input type="text" name="nombres" [(ngModel)]="nombres" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Apellidos</ion-label>
+        <ion-input type="text" name="apellidos" [(ngModel)]="apellidos" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Dirección</ion-label>
+        <ion-input type="text" name="direccion" [(ngModel)]="direccion" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Comuna</ion-label>
+        <ion-input type="text" name="comuna" [(ngModel)]="comuna" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Nro.Celular</ion-label>
+        <ion-input type="tel" name="nrocelu" [(ngModel)]="nrocelu" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Mi curso</ion-label>
+        <ion-select name="curso" [(ngModel)]="curso" placeholder="selecciona...">
+            <ion-select-option *ngFor="let curso of cursos" value="{{ curso.idcurso }}">{{ curso.curso }}</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="email" clearInput='true'></ion-input>
+    </ion-item>        
+    <ion-item>
+        <ion-label position="stacked">Clave de Acceso</ion-label>
+        <ion-input type="password" name="clave1" [(ngModel)]="clave1" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Repita Clave de Acceso para verificar</ion-label>
+        <ion-input type="password" name="clave2" [(ngModel)]="clave2" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Fecha de nacimiento</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" min="2000" max="2020-12-31" [(ngModel)]="fechanac"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Alergias a medicamentos o comidas</ion-label>
+        <ion-input type="text" name="alergias" [(ngModel)]="alergias" clearInput='true'></ion-input>
+    </ion-item>
+    
+    <ion-item-divider color="primary">
+        <ion-label>Apoderado-1</ion-label>
+    </ion-item-divider>
+    <ion-item>
+        <ion-label position="stacked">Nombres y datos generales de ubicación o parentezco</ion-label>
+        <ion-input type="text" name="apoderado1" [(ngModel)]="apoderado1" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Nro.Celular o Teléfono fijo</ion-label>
+        <ion-input type="tel" name="nroceluapo1" [(ngModel)]="nroceluapo1" clearInput='true'></ion-input>
+    </ion-item>
+
+    <ion-item-divider color="primary">
+        <ion-label>Apoderado-2</ion-label>
+    </ion-item-divider>
+    <ion-item>
+        <ion-label position="stacked">Nombres y datos generales de ubicación o parentezco</ion-label>
+        <ion-input type="text" name="apoderado2" [(ngModel)]="apoderado2" clearInput='true'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Nro.Celular o Teléfono fijo</ion-label>
+        <ion-input type="tel" name="nroceluapo2" [(ngModel)]="nroceluapo2" clearInput='true'></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button (click)="registrarAlumno()" expand="block" fill="solid" color="danger">Grabar mis datos</ion-button>
+  <ion-button (click)="salir()"           expand="block" fill="clear">Salir sin guardar</ion-button>
+
+</ion-content>

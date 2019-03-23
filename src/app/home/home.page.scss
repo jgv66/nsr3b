@@ -1,1 +1,48 @@
+ion-content {
+    --background: url("https://api.kinetik.cl/nsr3b/public/img/fachada_nsr.jpg");
+    --background-repeat: no-repeat;
+    --background-size:100% 100%;
+}
+ 
+ion-item {
+    font-size: 1.2em;
+    border-bottom: 10px !important;
+}
 
+ion-row {
+    align-items: center;
+    text-align: center;
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+.inicio {
+    margin-top: 240px;
+}
+
+.logo-cliente {
+    padding-top: 90xp;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display:block;
+    margin:auto;
+    height: 365px;
+}
+
+.login-box {
+    background: rgb(23, 24, 24);
+    padding: 10px 10px 20px 10px;
+    margin-top: 10px;
+    border-radius: 10px !important;
+}
+
+.logo-kinetik {
+    padding-top: 150px;
+    padding-bottom: 0px;
+    height: 0px !important;
+    display:block;
+    margin:auto;
+}
+
+
+// <div class="tp-bgimg defaultimg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;https://i0.wp.com/www.colegionsr.cl/wp-content/uploads/2016/10/fachada-colegio-016-USAR-OK-copy.jpg?fit=1400%2C1050&amp;ssl=1&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit; z-index: 20;" src="https://i0.wp.com/www.colegionsr.cl/wp-content/uploads/2016/10/fachada-colegio-016-USAR-OK-copy.jpg?fit=1400%2C1050&amp;ssl=1"></div>

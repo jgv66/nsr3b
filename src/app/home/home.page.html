@@ -1,14 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+  
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  
+  <ion-row class="inicio"  translucent="true">
+    <ion-col>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-icon slot='start' name='mail'></ion-icon>
+          <ion-input type="text" placeholder="Email" [(ngModel)]="email" clearInput ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot='start' name='key'></ion-icon>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="pssw" clearInput></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  
+  <ion-button color="secondary" size='large' expand='full' (click)="doLogin()">Ingresar</ion-button>
+  <ion-button color="dark" size='small' expand='full' fill="clear" (click)="registraMe()">Registrarme</ion-button>
+
+  <ion-row class="logo-kinetik">
+    <img src="assets/imgs/logo-kinetik.png">
+  </ion-row>
+  
 </ion-content>
+  
+
